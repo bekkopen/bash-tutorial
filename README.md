@@ -6,7 +6,7 @@ h1. Examples
 
 # Debugging
 
-Source: scripts/debugging_easy_example.sh and scripts/debugging_tougher_example.sh                                      
+Source: scripts/debugging\_easy\_example.sh and scripts/debugging\_tougher\_example.sh                                      
 
 The point: Debugging is hard in bash.
 
@@ -30,7 +30,7 @@ Assignment: How would you organize your files when you have specific scripts for
 
 # Functions and configuration
 
-Source: include/common_functions.sh include/common_config.sh
+Source: include/common\_functions.sh include/common\_config.sh
 
 The point: Reduce complexity, enhance testability, and reuseability.
 
@@ -38,7 +38,7 @@ Assignment: Go through the functions and try to understand them. Write your own 
 
 # Return values and return statuses
 
-Source: include/common_functions.sh
+Source: include/common\_functions.sh
 
 The point: Understand the differences betwwen a return value and a return status.
 
@@ -54,7 +54,7 @@ Assignment: Write a function in a file and include and use it in a script.
 
 # Debugging revisited
 
-Source: include/common_functions.sh
+Source: include/common\_functions.sh
 
 The point: Understand how you can debug your scripts without executing "dangerous" commands. Understand the -x and the set +e set -e constructs.
 

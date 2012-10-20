@@ -20,7 +20,7 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **Assignment:** Try out the different ifs and explain the differences, when to use, and what you prefer.
 
-## Organizing of files
+## Organizing files
 
 **Source:** The project tree
 
@@ -38,11 +38,26 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 ## Return values and return statuses
 
-**Source:** include/common\_functions.sh
+**Source:** include/common\_functions.sh (functions: \_is\_snapshot, \_start, \_find\_version\_from\_pom and \_delete)
 
 **The point:** Understand the differences betwwen a return value and a return status.
 
 **Assignment:** Revisit the functions and explain what the different functions return (values and/or statuses)
+
+## Pitfall return values
+
+**Source:** scripts/pitfall\_return\_values.sh
+
+**The point:** Understand a common pitfall when using return values.
+
+**Assignment:** Comment in the echo statement in the function and see what happens. Why?
+
+## Pitfall return statuses
+**Source:** scripts/pitfall\_return\_status.sh
+
+**The point:** Understand a common pitfall when using return statuses.
+
+**Assignment:** Why do the two statements return different statuses?
 
 ## Including common functionality
 
@@ -59,6 +74,8 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 **The point:** Understand how you can debug your scripts without executing "dangerous" commands. Understand the -x and the set +e set -e constructs.
 
 **Assignment:** Write debugging for a function or script where it is lacking.
+
+## Unit testing 
 
 ## Simple deploy and rollback
 

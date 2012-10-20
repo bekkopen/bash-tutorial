@@ -192,6 +192,10 @@ _is_valid_version() {
   return 1
 }
 
+_find_version_from_pom() {
+  echo $( grep -E "<version>[0-9]+(\.[0-9]+)+(-SNAPSHOT)?</version>" ${1} -m1 | sed 's/.*<version>\(.*\)<\/version>/\1/' )
+}
+
 _delete() {
    if [ -d "${1}" ]; then
       rm -Rf "${1}"

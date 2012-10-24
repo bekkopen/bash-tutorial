@@ -1,8 +1,9 @@
 #!/bin/bash
 # Usage: rollback.sh <artifact> <version> 
 
-if [ $# -ne 2 ]; then
-  echo "Usage: $0 <artifact> <version> <path>"
+if [ $# -lt 2 ]; then
+  echo "Usage: $0 <artifact> <version>"
+  exit 1
 fi
 
 artifact=$1

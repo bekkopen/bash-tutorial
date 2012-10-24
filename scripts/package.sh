@@ -14,7 +14,7 @@ cd ${BASEDIR}
 
 [[ "clean" == "${1}" ]] && eval "cd .. ; rm -rf target/* ; exit 0"
 
-if [ $# -ne 2 ]; then
+if [ $# -lt 2 ]; then
   _fatal "Usage: $0 <artifact> <version>"
 fi
 

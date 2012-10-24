@@ -1,7 +1,7 @@
 #!/bin/bash
 # Usage: deploy.sh <artifact> <version> 
 
-if [ $# -ne 2 ]; then
+if [ $# -lt 2 ]; then
   echo "Usage: $0 <artifact> <version>"
   exit 1
 fi

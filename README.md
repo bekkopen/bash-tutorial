@@ -22,7 +22,7 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 ## Organizing files
 
-**Source:** The project tree
+**Source:** The project tree.
 
 **The point:** Understand convention over configuration and why it is important to put different types of files in different places.
 
@@ -32,7 +32,7 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **Source:** include/common\_functions.sh include/common\_config.sh
 
-**The point:** Reduce complexity, enhance testability, and reuseability.
+**The point:** Reduce complexity, enhance testability, and reusability.
 
 **Assignment:** Go through the functions and try to understand them. Write your own function.
 
@@ -75,7 +75,39 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **Assignment:** Write debugging for a function or script where it is lacking.
 
-## Unit testing 
+## Logging
+
+**Source:** scripts/logging.sh scripts/rotating\_log.sh  and include/log.sh
+
+**The point:** Understand how you can write your own logging framework.
+
+**Assignment:** Write logging configuration to switch betwwen logging to file and stdout.
+
+## Unit testing framework
+
+**Source:** tests/runAll.sh
+
+**The point:** Example of how you can syntax check and run all your tests.
+
+**Assignment:** MAke running of tests part of your build (scripts/package.sh)
+
+## Unit testing using the && and || operators
+
+**Source:** tests/testMs.sh
+
+**The point:** An example of how you can unit test bash functions using the && and || operators.
+
+**Assignment:** Write a unit test. Is this readable?
+
+## Unit testing with asserts
+
+**Source:** bashUnit/asserts.sh and tests/testVersionCheck.sh
+
+**The point:** An example of how you can unit test bash functions using asserts.
+
+**Assignment:** How does assertEquals differ from the assertTrue in e. g. jUnit? Write an assertTrue function and a test that uses it. Is this more readable?
+
+** Bonus assignment:** Write an assertArrayEquals function and a test that uses it.
 
 ## Simple deploy and rollback
 

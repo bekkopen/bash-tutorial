@@ -22,7 +22,9 @@ if [ "${version}" != "rollback" ] && [ ${#artifactsAndVersions[@]} -ne 0 ]; then
   else
     installDeployCmds=( "wget -O deploy-${deployVersion}.zip ${NEXUS_URL}deploy-${deployVersion}.zip" )
   fi
- fi
+fi
+
+echo "end of script"
 
 # Should produce:
-# /Users/stein/deploy.sh: line 29: syntax error: unexpected end of file
+# scripts/debugging_tougher_example.sh: line 31: syntax error: unexpected end of file

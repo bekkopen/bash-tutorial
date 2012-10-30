@@ -35,7 +35,7 @@ _getWebServerPort() {
 }
 
 _check_health() {
-  local cmd="curl http://${HOSTNAME}${server_suffix}:$( _getWebServerPort )/api/node 2>/dev/null | grep online"
+  local cmd="curl http://${HOSTNAME}${server_suffix}:$( _getWebServerPort )/status.html 2>/dev/null | grep online"
   test "${debug}" == "true" && echo ${cmd} || eval ${cmd}
   return $?
 }
@@ -109,9 +109,6 @@ _controlServers() {
   local -a remote_targets
   for target in ${targets[@]}
   do
-    if ( ! _contains ${valid_environments_and_servers[@]} ${target} ); then
-      _fatal "Illegal target ${target}"
-    fi
     if [ "${target}" == "${HOSTNAME}" ]; then
       _info "Running: ${cmd}"
       test "${debug}" == "true" && echo ${cmd} || eval ${cmd}
@@ -143,6 +140,24 @@ _startServers() {
 _restartServers() {
   local -a targets=( "${!1}" )
   local -a artifacts=( "${!2}" )
+  _controlServers targets[@] artifacts[@] "restart"
+}
+
+_stopServer() {
+  local -a targets=( "${1}" )
+  local -a artifacts=( "${2}" )
+  _controlServers targets[@] artifacts[@] "stop"
+}
+
+_startServer() {
+  local -a targets=( "${1}" )
+  local -a artifacts=( "${2}" )
+  _controlServers targets[@] artifacts[@] "start"
+}
+
+_restartServer() {
+  local -a targets=( "${1}" )
+  local -a artifacts=( "${2}" )
   _controlServers targets[@] artifacts[@] "restart"
 }
 

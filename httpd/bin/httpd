@@ -2,12 +2,15 @@
 
 import SimpleHTTPServer
 import SocketServer
+import time
 
 PORT = 8000
 
 Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
 
 httpd = SocketServer.TCPServer(("", PORT), Handler)
+
+time.sleep(10)
 
 print "serving at port", PORT
 httpd.serve_forever()

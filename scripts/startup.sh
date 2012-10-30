@@ -22,7 +22,7 @@ _start()
   fi
 }
 
-_stopp()
+_stop()
 {
   _log "Stopping ${app}"
   _debug "Stopping ${app}"
@@ -106,7 +106,7 @@ case $1 in
   stop)
     if [ "${pid}" != "" ]
     then
-      _stopp
+      _stop
     else
       _error "${app_and_version} is not running"
       retval=0
@@ -115,7 +115,7 @@ case $1 in
   restart)
     if [ "${pid}" != "" ]
     then
-      _stopp
+      _stop
     else
       _error "${app_and_version} is not running"
     fi

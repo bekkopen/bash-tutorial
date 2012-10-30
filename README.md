@@ -34,13 +34,13 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **The point:** Reduce complexity, enhance testability, and reusability.
 
-**Assignment:** Go through the functions and try to understand them. Write your own function.
+**Assignment:** Go through the functions and try to understand them. Write your own function. How can you run the functions directly from the command line?
 
 ## Return values and return statuses
 
-**Source:** include/common\_functions.sh (functions: \_is\_snapshot, \_start, \_find\_version\_from\_pom and \_delete)
+**Source:** include/common\_functions.sh (functions: \_is\_snapshot, \_startServers, \_find\_version\_from\_pom and \_delete)
 
-**The point:** Understand the differences betwwen a return value and a return status.
+**The point:** Understand the differences between a return value and a return status.
 
 **Assignment:** Revisit the functions and explain what the different functions return (values and/or statuses)
 

@@ -7,8 +7,7 @@ do
   if [ -f "${default_path}/${include_file}" ]; then
     includes+=( "${default_path}/${include_file}" )
   else
-    echo "File ${include_file} not found. Quitting! :-("
-    exit 1
+    echo "File ${include_file} not found."
   fi
 done
 
@@ -17,6 +16,6 @@ do
   if [ -f ${include} ]; then
   . ${include}
   else
-    _fatal "File ${include} not found. Quitting! :-("
+    echo "File ${include} not found."
   fi
 done

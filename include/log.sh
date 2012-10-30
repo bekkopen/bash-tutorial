@@ -34,29 +34,25 @@ _log_date() {
 }
 
 _init_log() {
+  local timestamp=`date +%Y%m%d`
   logs="${1}"
   log_filename="${2}"
   if [ ! -d ${logs} ]; then
     mkdir $logs
   fi
-}
-
-_log(){
-  local timestamp=`date +%Y%m%d`
-  local date_stamp=`date`
-  local text="${1} ${2}"
-  echo ${date_stamp}: ${text} >> $logs/$log_filename;
-  find $logs -name ${log_filename}*.log -type f -size +512k | while read logfile
+  find $logs -name ${log_filename} -type f -size +8k | while read logfile
   do
-    local newlogfile=$logs/$log_filename.$timestamp
-    count=1
-    while [ -e $newlogfile.$count.gz ] || [ -e $newlogfile.gz ]; do
-      count=$count+1
-      newlogfile=$newlogfile.$count
-    done
+    echo $logfile
+    local newlogfile=$logfile.$timestamp
     cp $logfile $newlogfile
     cat /dev/null > $logfile
     gzip -f -9 $newlogfile
   done
   find $logs -name "${log_filename}*.gz" -type f -mtime 30 |xargs rm -f
+}
+
+_log(){
+  local date_stamp=`date`
+  local text="${1} ${2}"
+  echo ${date_stamp}: ${text} >> $logs/$log_filename;
 }

@@ -69,15 +69,15 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 ## Debugging revisited
 
-**Source:** include/common\_functions.sh
+**Source:** include/common\_functions.sh scripts/debugging.sh
 
-**The point:** Understand how you can debug your scripts without executing "dangerous" commands. Understand the -x and the set +e set -e constructs.
+**The point:** Understand how you can debug your scripts without executing "dangerous" commands. Understand the -x, the -u, and the set -e set +e constructs.
 
 **Assignment:** Write debugging for a function or script where it is lacking.
 
 ## Logging
 
-**Source:** scripts/logging.sh scripts/rotating\_log.sh  and include/log.sh
+**Source:** scripts/logging.sh scripts/rotating\_log.sh include/log.sh
 
 **The point:** Understand how you can write your own logging framework.
 

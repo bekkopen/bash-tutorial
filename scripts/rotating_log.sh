@@ -19,7 +19,7 @@ _init_log "${logdir}" "${logfile}"
 _log "Logging to ${logdir}/${logfile}"
 _log "Logging to the ${logdir}/${logfile} again"
 
-while [ 512 -gt $(du -k ${logdir}/${logfile} | cut -c1) ]; do
+while [ 9 -gt $(du -k ${logdir}/${logfile} | cut -c1) ]; do
   _log "Lorem ipsum dolor sit amet, consectetur adipisicing elit, \
         sed do eiusmod tempor incididunt ut labore et dolore magna \
         aliqua. Ut enim ad minim veniam, quis nostrud exercitation \
@@ -29,5 +29,7 @@ while [ 512 -gt $(du -k ${logdir}/${logfile} | cut -c1) ]; do
         occaecat cupidatat non proident, sunt in culpa qui officia \
         deserunt mollit anim id est laborum."
 done
+
+# To change the timestamp of the file type touch -t 201205101024 logs/mylog*.gz
 
 _happyQuit "Done :)"

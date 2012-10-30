@@ -109,6 +109,9 @@ _controlServers() {
   local -a remote_targets
   for target in ${targets[@]}
   do
+    if ( ! _contains ${valid_environments_and_servers[@]} ${target} ); then
+      _fatal "Illegal target ${target}"
+    fi
     if [ "${target}" == "${HOSTNAME}" ]; then
       _info "Running: ${cmd}"
       test "${debug}" == "true" && echo ${cmd} || eval ${cmd}

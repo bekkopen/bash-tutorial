@@ -19,19 +19,19 @@ val=$( _check_health ${server} )
 _assertEquals 0 $? "Test: _check_health when hostname is not a qa- or prod-server ( ${HOSTNAME} )"
 
 HOSTNAME="node1"
-expected="curl http://${HOSTNAME}${server_suffix}:80/api/node 2>/dev/null | grep online"
+expected="curl http://${HOSTNAME}${server_suffix}:80/status.html 2>/dev/null | grep online"
 val=$( _check_health ${server} 2> /dev/null )
 _assertEquals 0 $?
 _assertEquals "${expected}" "${val}" "Test: _check_health when hostname is ${HOSTNAME} )"
 
 HOSTNAME="test"
-expected="curl http://${HOSTNAME}${server_suffix}:81/api/node 2>/dev/null | grep online"
+expected="curl http://${HOSTNAME}${server_suffix}:81/status.html 2>/dev/null | grep online"
 val=$( _check_health ${server} 2> /dev/null )
 _assertEquals 0 $?
 _assertEquals "${expected}" "${val}" "Test: _check_health when hostname is ${HOSTNAME} )"
 
 HOSTNAME="unknown"
-expected="curl http://${HOSTNAME}${server_suffix}:UNDEFINED/api/node 2>/dev/null | grep online"
+expected="curl http://${HOSTNAME}${server_suffix}:UNDEFINED/status.html 2>/dev/null | grep online"
 val=$( _check_health ${server} 2> /dev/null )
 _assertEquals 0 $?
 _assertEquals "${expected}" "${val}" "Test: _check_health when hostname is ${HOSTNAME} )"

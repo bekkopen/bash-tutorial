@@ -89,7 +89,7 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **The point:** Example of how you can syntax check and run all your tests.
 
-**Assignment:** MAke running of tests part of your build (scripts/package.sh)
+**Assignment:** Make running of tests part of your build (scripts/package.sh)
 
 ## Unit testing using the && and || operators
 

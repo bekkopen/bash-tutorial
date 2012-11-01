@@ -6,7 +6,7 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 ## Debugging
 
-**Source:** [scripts/debugging\_easy\_example.sh](scripts/debugging\_easy\_example.sh) and [scripts/debugging\_tougher\_example.sh] 
+**Source:** [/scripts/debugging\_easy\_example.sh](scripts/debugging\_easy\_example.sh) and [/scripts/debugging\_tougher\_example.sh](scripts/debugging\_easy\_example.sh)
 
 **The point:** Debugging is hard in bash.
 

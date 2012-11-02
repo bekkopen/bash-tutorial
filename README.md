@@ -117,6 +117,8 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **Assignment:** Package your app. What is the result?
 
+!
+
 ## Simple deploy and rollback
 
 **Source:** [scripts/deploy.sh](bash-tutorial/blob/master/scripts/deploy.sh) [scripts/rollback.sh](bash-tutorial/blob/master/scripts/rollback.sh)

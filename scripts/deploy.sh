@@ -10,8 +10,8 @@ artifact=${1}
 version=${2}
 
 #wget https://nexus.bekk.no/${artifact}/${version}/${artifact}-${version}.zip
-cp ~/utvikling/bash-tutorial/scripts/startup.sh /etc/init.d/${artifact}
-cp ~/utvikling/bash-tutorial/target/${artifact}-${version}.zip ~/  
+cp scripts/startup.sh /etc/init.d/${artifact}
+cp target/${artifact}-${version}.zip ~/  
 
 cd ~/
 

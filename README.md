@@ -20,14 +20,6 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **Assignment:** Try out the different ifs and explain the differences, when to use, and what you prefer.
 
-## Organizing files
-
-**Source:** The project tree.
-
-**The point:** Understand convention over configuration and why it is important to put different types of files in different places.
-
-**Assignment:** How would you organize your files when you have specific scripts for different projects residing in different folders.
-
 ## Functions and configuration
 
 **Source:** [include/common\_functions.sh include/common\_config.sh](bash-tutorial/blob/master/include/common\_functions.sh include/common\_config.sh)
@@ -108,6 +100,22 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 **Assignment:** How does assertEquals differ from the assertTrue in e. g. jUnit? Write an assertTrue function and a test that uses it. Is this more readable?
 
 **Bonus assignment:** Write an assertArrayEquals function and a test that uses it.
+
+## Organizing files
+
+**Source:** The project tree.
+
+**The point:** Understand convention over configuration and why it is important to put different types of files in different places.
+
+**Assignment:** How would you organize your files when you have specific scripts for different projects residing in different folders.
+
+## Packaging your app
+
+**Source:** [scripts/package.sh](bash-tutorial/blob/master/scripts/package.sh)
+
+**The point:** An example of how you can package your app.
+
+**Assignment:** Package your app. What is the result?
 
 ## Simple deploy and rollback
 

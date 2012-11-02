@@ -93,7 +93,7 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 ## Unit testing with asserts
 
-**Source:** [bashUnit/asserts.sh](bash-tutorial/blob/master/bashUnit/asserts.sh) [tests/testVersionCheck.sh](bash-tutorial/blob/master/tests/testVersionCheck.sh)
+**Source:** [bashUnit/asserts.sh](bash-tutorial/blob/master/bashUnit/asserts.sh) [tests/testVersionCheck.sh](bash-tutorial/blob/master/tests/testVersionCheck.sh) [tests/testCheckHealth.sh](bash-tutorial/blob/master/tests/testCheckHealth.sh)
 
 **The point:** An example of how you can unit test bash functions using asserts.
 

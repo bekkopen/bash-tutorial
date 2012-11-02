@@ -12,9 +12,9 @@ cd ${BASEDIR}
 
 . ../include/log.sh
 
-_info "Logging with _info"
-
 _debug "Logging with _debug"
+
+_info "Logging with _info"
 
 _error "Logging with _error"
 

@@ -73,7 +73,7 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **The point:** Understand how you can write your own logging framework.
 
-**Assignment:** Write logging configuration to switch betwwen logging to file and stdout.
+**Assignment:** Write logging configuration to switch between logging to file and stdout.
 
 ## Unit testing framework
 

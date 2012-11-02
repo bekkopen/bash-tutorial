@@ -12,7 +12,7 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **Assignment:** Find the bugs.
 
-## Syntax
+## Syntax (readability)
 
 **Source:** [scripts/syntax.sh](bash-tutorial/blob/master/scripts/syntax.sh)
 

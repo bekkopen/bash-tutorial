@@ -29,7 +29,7 @@ target="target/${artifact}-${version}"
 [[ -d ${target} ]] && rm -rf ${target}
 mkdir -p ${target}
 
-cp -R httpd/* ${target}
+cp -R ${artifact}/* ${target} || _fatal "Unknown artifact ${artifact}"
 
 cd target
 

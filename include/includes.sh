@@ -14,7 +14,7 @@ done
 for include in ${includes[@]}
 do
   if [ -f ${include} ]; then
-  . ${include}
+    . ${include}
   else
     echo "File ${include} not found."
   fi

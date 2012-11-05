@@ -2,6 +2,8 @@
 
 This project is used for workshop purposes and contains examples of (hopefully) good practices for bash scripting.
 
+**Source:** https://github.com/steinim/bash-tutorial
+
 # Examples
 
 ## Debugging

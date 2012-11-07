@@ -3,9 +3,9 @@
 if [ "${version}" != "rollback" ] && [ ${#artifactsAndVersions[@]} -ne 0 ]; then
   if ( _contains ${targets[@]} ${host} ) || ( _is_snapshot ${deployVersion} ) ;     
   then
-    deployFile="${M2_REPO}/no/posten/dpost/deploy/${deployVersion}/deploy-${deployVersion}.zip"
+    deployFile="${M2_REPO}/no/bekkopen/myapp/deploy/${deployVersion}/deploy-${deployVersion}.zip"
     if [ ! -s "${deployFile}" ]; then
-      echo "mkdir -p ${M2_REPO}/no/posten/dpost/deploy/${deployVersion}/"
+      echo "mkdir -p ${M2_REPO}/no/bekkopen/myapp/deploy/${deployVersion}/"
       if ( _is_snapshot ${deployVersion} ); then
         if [ -s ~/deploy-${deployVersion}.zip ]; then
           _debug "Found deploy-${deployVersion}.zip in homedir. Moving it to ${deployFile}."

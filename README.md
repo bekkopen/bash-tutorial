@@ -119,7 +119,6 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 **Assignment:** Package your app. What is the result?
 
-!
 
 ## Simple deploy and rollback
 

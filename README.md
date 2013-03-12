@@ -134,3 +134,10 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 [Rerun](http://rerun.github.com/rerun/)  - a simple command runner that turns loose shell scripts into modular automation.
 
 ![Rerun_image](https://secure.gravatar.com/avatar/b81476b46e5e582d34a6db001a2ebb86?s=400&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png)
+
+!
+
+## Thats all folks!
+Contact me:
+* Google: steinim@gmail.com
+* Twitter: @steinim

@@ -8,7 +8,7 @@ if [ "$(whoami)" != 'root' ]; then
 fi
 
 # one-liner if
-[[ "$(whoami)" != 'root' ]] && echo "${message}"
+[ "$(whoami)" != 'root' ] && echo "${message}"
 
 # test keyword
 test "$(whoami)" != 'root'  && echo "${message}"

@@ -139,5 +139,7 @@ This project is used for workshop purposes and contains examples of (hopefully) 
 
 ## Thats all folks!
 Contact me:
+
 * Google: steinim@gmail.com
+
 * Twitter: @steinim

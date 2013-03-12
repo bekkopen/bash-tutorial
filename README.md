@@ -1,4 +1,4 @@
-# #!/bin/bash for programmers.
+# <tt>#!/bin/bash</tt> for programmers.
 
 # About
 

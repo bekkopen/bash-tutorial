@@ -1,16 +1,12 @@
-#!/usr/bin/python
+#!/bin/bash
 
-import SimpleHTTPServer
-import SocketServer
-import time
+PORT=8000
 
-PORT = 8000
+sleep 10
 
-Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+if `lsof -i :$PORT &> /dev/null`; then
+  echo "Failed to listen on port $PORT, port is already in use"
+  exit 1
+fi
 
-httpd = SocketServer.TCPServer(("", PORT), Handler)
-
-time.sleep(10)
-
-print "serving at port", PORT
-httpd.serve_forever()
+/usr/bin/env python -m SimpleHTTPServer $PORT 2>/dev/null

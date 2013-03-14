@@ -25,7 +25,6 @@ version=${2}
 
 target="target/${artifact}-${version}"
 
-[[ -d target ]] && rm -rf target
 [[ -d ${target} ]] && rm -rf ${target}
 mkdir -p ${target}
 

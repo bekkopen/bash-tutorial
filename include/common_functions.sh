@@ -12,6 +12,17 @@ _command_exists() {
     type "$1" &> /dev/null;
 }
 
+_contains() {
+  local n=$#
+  local value=${!n}
+  for ((i=1;i < $#;i++)) ; do
+    if [ "${!i}" == "${value}" ]; then
+      return 0
+    fi
+  done
+  return 1
+}
+
 _network_ip() {
   if ( _command_exists ipconfig ) ; then
     ipconfig getifaddr en1
@@ -22,6 +33,15 @@ _network_ip() {
 
 _port_is_taken() {
   lsof -i :$1 &> /dev/null;
+}
+
+_setUpSshTunnel() {
+  local host=${1}
+  local user=${2}
+  local port=${3}
+  local cmd="ssh -nNT -L ${port}:localhost:${port} ${user}@${host} &"
+  [ ${debug} ] || eval ${cmd}
+  [ ${debug} ] && echo 1 || echo $!
 }
 
 _getWebServerPort() {
@@ -180,17 +200,6 @@ _upload_file() {
     _error "File ${file} not found!"
     exit 2
   fi
-}
-
-_contains() {
-  local n=$#
-  local value=${!n}
-  for ((i=1;i < $#;i++)) {
-    if [ "${!i}" == "${value}" ]; then
-      return 0
-    fi
-  }
-  return 1
 }
 
 _is_snapshot() {

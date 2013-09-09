@@ -12,7 +12,6 @@ done
 cd ${BASEDIR}
 
 . ../include/includes.sh
-. ../bashUnit/asserts.sh
 
 echo "* * * Testing conversion from seconds to minutes and seconds _ms * * *"
 expected=10m:15s

@@ -91,7 +91,7 @@ appdir=${app_home}
 startscript=${appdir}/bin/${app}
 app_and_version=$( readlink $app_home ) # trim trailing slash if it exists
 
-pid=$( ps -ea -o "pid ppid args" | grep -v grep | grep "${startscript}" | sed -e 's/^  *//' -e 's/ .*//' | head -1 )
+pid=$( ps -ea -o "pid ppid args" | grep -v grep | grep "8080" | sed -e 's/^  *//' -e 's/ .*//' | head -1 )
 
 case $1 in
   start)

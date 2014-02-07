@@ -16,7 +16,8 @@ echo "* * * Testing _check_health * * *"
 debug="true"
 
 val=$( _check_health ${server} )
-_assertEquals 0 $? "Test: _check_health when hostname is not a qa- or prod-server ( ${HOSTNAME} )"
+_assertTrue $? "Test: _check_health when hostname is not a qa- or prod-server ( ${HOSTNAME} )"
+#_assertEquals 0 $? "Test: _check_health when hostname is not a qa- or prod-server ( ${HOSTNAME} )"
 
 HOSTNAME="node1"
 expected="curl http://${HOSTNAME}${server_suffix}:80/status.html 2>/dev/null | grep online"

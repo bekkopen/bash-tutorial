@@ -13,9 +13,7 @@ cd ~/
 
 /etc/init.d/${artifact} stop
 
-rm ${artifact} # softlink
-
-ln -s ${artifact}-${version} ${artifact}
+ln -nsf ${artifact}-${version} ${artifact}
 
 /etc/init.d/${artifact} start
 

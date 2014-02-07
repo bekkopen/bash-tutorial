@@ -1,0 +1,124 @@
+<html>
+<head>
+<link rel="icon" 
+      type="image/png" 
+      href="bekkopen.png">
+<title>#!/bin/bash tutorial</title>
+<style>
+  html, body {
+  	margin:0;
+  	border:0;
+  	padding:0;
+  	font-family: helvetica;
+    color: white;
+  }
+  div.centered {
+  	margin:auto;
+  	font-size:40px;
+  	width:30em; /* So we get about 15 words per line */
+  }
+  .slideCount {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+  }
+
+  /* My styling here */
+  body {
+    background: black;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#616161));
+    background: -moz-linear-gradient(top,  #000000,  #616161);
+    text-shadow: #000 0 -2px 0;
+  }
+  .bg {
+    background-image: url(bg.jpg);
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    opacity:0.01;
+   }
+   a:link {text-decoration:none;}
+   a:visited {text-decoration:none;}
+   a:hover {text-decoration:underline;}
+   a:active {text-decoration:underline;}
+   a:link {color:white;}
+   a:visited {color:white;}
+   a:hover {color:white;}
+   a:active {color:white;}
+   /*.align-right { float:right; margin: 0 0 30px 30px; } */
+   .align-right {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+   }
+
+ /* End styling */
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/showdown.js"></script>
+</head>
+<body>
+
+<div class="bg">&nbsp;</div>
+
+<img src="bekk_open.gif" alt="BEKK Open" class="align-right" />
+
+<table style="width:100%;height:100%;border-collapse:collapse">
+<tr valign=center>
+<td>
+<div class='centered'>
+<em>Loading</em>
+</div>
+</td>
+</tr>
+</table>
+
+<div class='slideCount'>Slide X of Y</div>
+
+</body>
+</html>
+
+<script>
+var Present = {};
+Present.converter = new Showdown.converter();
+Present.showSlide = function(slide) {
+  Present.currentSlide = slide;
+  $('.centered').html(Present.slides[Present.currentSlide]);
+  $('.slideCount').html('Slide ' + (Present.currentSlide+1) + ' of ' + Present.slides.length);
+};
+Present.nextSlide = function() {
+  if (Present.currentSlide < Present.slides.length-1) {
+    Present.showSlide(Present.currentSlide+1);  
+  }
+};
+Present.prevSlide = function() {
+  if (Present.currentSlide > 0) {
+    Present.showSlide(Present.currentSlide-1);
+  }
+};
+
+$.ajax({
+  url: 'README.md',
+  success: function(data) {
+    if (data.length>0) {
+      var converted = Present.converter.makeHtml(data);
+      Present.slides = converted.split('<p>!</p>');
+      Present.showSlide(0);
+    }
+  }
+});
+
+$(document).keydown(function(e){
+    if (e.keyCode == 37) { 
+       Present.prevSlide();
+       return false;
+    }
+    if (e.keyCode == 39) { 
+      Present.nextSlide();
+      return false;
+    }
+});
+
+</script>

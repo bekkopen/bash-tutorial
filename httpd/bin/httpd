@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PORT=8000
+
+sleep 10
+
+if `lsof -i :$PORT &> /dev/null`; then
+  echo "Failed to listen on port $PORT, port is already in use"
+  exit 1
+fi
+
+/usr/bin/env python -m SimpleHTTPServer $PORT 2>/dev/null

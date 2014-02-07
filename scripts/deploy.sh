@@ -10,8 +10,10 @@ artifact=${1}
 version=${2}
 
 #wget https://nexus.bekk.no/${artifact}/${version}/${artifact}-${version}.zip
-cp scripts/startup.sh /etc/init.d/${artifact}
-cp target/${artifact}-${version}.zip ~/  
+cmd="cp scripts/startup.sh /etc/init.d/${artifact}"
+[ $debug ] && echo $cmd || eval $cmd
+
+_run "cp target/${artifact}-${version}.zip ~/" 
 
 cd ~/
 
@@ -19,9 +21,7 @@ unzip -o ${artifact}-${version}.zip
 
 /etc/init.d/${artifact} stop
 
-rm ${artifact} # softlink
-
-ln -s ${artifact}-${version} ${artifact}
+ln -nsf ${artifact}-${version} ${artifact}
 
 /etc/init.d/${artifact} start
 
